@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAR KANOMBE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002147;
+    padding: 0px 10PX;
+    color:#ffffff;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    display: flex;
+    position: relative;
+}
+
+.navbar .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1em;
+}
+
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: #ffffff;
+    background-color: #002147;
+    border-radius: 3px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px 20px;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #002147;
+    height: 53vh;
+}
+.logo-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* footer.css */
+
+.church-footer {
+    background-color: #002147; /* Deep Royal Blue */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    color: #D4AF37; /* Gold accent for titles */
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p, 
+  .footer-section ul, 
+  .footer-section ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+  }
+  
+  .footer-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+    color: #D4AF37; /* Gold on hover */
+  }
+  
+  .social-links a {
+    margin: 0 5px;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #cccccc;
+  }
+  
+    </style>
+</head>
+<body> 
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images.png" alt="EAR Kanombe Logo"> 
+            <p class="logo-title">EAR KANOMBE</p>
+        </div>
+        <div class="menu">
+            <div class="dropdown">
+                <a href="#">Home</a>
+            </div>
+            <div class="dropdown">
+                <a href="#">Sermons</a>
+            </div>
+            <div class="dropdown">
+                <a href="#">Events</a>
+                <div class="dropdown-content">
+                    <a href="#">Upcoming Events</a>
+                    <a href="#">Past Events</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Union</a>
+                <div class="dropdown-content">
+                    <a href="#">Mother's Union</a>
+                    <a href="#">Father's Union</a>
+                    <a href="#">Youth Union</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Donate</a>
+                <div class="dropdown-content">
+                    <a href="#">Church Projects</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <p>Welcome to St John Kanombe Parish website! Please navigate using the menu above.</p>
+</div>
+<footer class="church-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Serving our community in faith, worship, and service</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Visit Us</h3>
+            <p>123 Church Street<br>Cityville, Country</p>
+            <p>Sunday service: 10:00 AM & 1:00 PM</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect</h3>
+            <div class="social-links">
+                <a href="#">Facebook</a> |
+                <a href="#">YouTube</a> |
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2025 EAR KANOMBE | Designed with faith and care
+    </div>
+</footer>
+
+</body>
+</html>
