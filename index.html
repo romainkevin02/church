@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EAR KANOMBE</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F5F5F5;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #002147;
+      padding: 10px 15px;
+      color: #ffffff;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo img {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 1em;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #002147;
+      min-width: 160px;
+      z-index: 1;
+      padding: 10px 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #003366;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #002147;
+        position: absolute;
+        top: 70px;
+        left: 0;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .dropdown-content {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: none;
+      }
+
+      .dropdown.active .dropdown-content {
+        display: block;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.2em;
+      color: #002147;
+      height: 53vh;
+    }
+
+    /* Footer styling remains unchanged */
+    .church-footer {
+      background-color: #002147;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .footer-section h3 {
+      color: #D4AF37;
+      margin-bottom: 15px;
+    }
+
+    .footer-section p,
+    .footer-section ul,
+    .footer-section ul li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+      color: #D4AF37;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="images.png" alt="EAR Kanombe Logo" />
+      <p class="logo-title">EAR KANOMBE</p>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="dropdown"><a href="#">Home</a></div>
+      <div class="dropdown"><a href="#">Sermons</a></div>
+      <div class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">Events</a>
+        <div class="dropdown-content">
+          <a href="#">Upcoming Events</a>
+          <a href="#">Past Events</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">Union</a>
+        <div class="dropdown-content">
+          <a href="#">Mother's Union</a>
+          <a href="#">Father's Union</a>
+          <a href="#">Youth Union</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">Donate</a>
+        <div class="dropdown-content">
+          <a href="#">Church Projects</a>
+        </div>
+      </div>
+      <div class="dropdown"><a href="#">About Us</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+  <p>Welcome to St John Kanombe Parish website! Please navigate using the menu above.</p>
+</div>
+
+<footer class="church-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Serving our community in faith, worship, and service</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Visit Us</h3>
+      <p>123 Church Street<br>Cityville, Country</p>
+      <p>Sunday service: 10:00 AM & 1:00 PM</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Connect</h3>
+      <div class="social-links">
+        <a href="#">Facebook</a> |
+        <a href="#">YouTube</a> |
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 EAR KANOMBE | Designed with faith and care
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+  }
+
+  function toggleDropdown(event) {
+    event.preventDefault();
+    const parent = event.target.closest('.dropdown');
+    parent.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
